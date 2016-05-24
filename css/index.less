@@ -1,0 +1,83 @@
+//out:index.css
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  font-size: 1.6rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+@keyframes slideInUp {
+    from {
+        transform: translate3d(0, 200px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+.navbarOptions{
+  width: 100%;
+  position: fixed;
+  height: auto;
+  top: 0;
+  z-index: 100;
+  background: gray;
+  .options{
+    width: auto;
+    height: auto;
+    position: relative;
+    float: right;
+    right: 4rem;
+    .option{
+      position: relative;
+      float: left;
+      padding: 2rem 5rem;
+      padding-left: 0;
+    }
+  }
+}
+
+.mainContainer {
+  position: relative;;
+  font-family: 'Lato', sans-serif;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  .section{
+    position: relative;
+    width:100%;
+    float:left;
+    height: 100vh;
+    animation-duration: .6s;
+    animation-fill-mode: both;
+    animation-name: slideInUp;
+    &#home{
+      background: red;
+    }
+    &#about{
+      background: yellow;
+    }
+    &#menu{
+      background: green;
+    }
+    &#event{
+      background: blue;
+    }
+    &#contact{
+      background: black;
+    }
+  }
+}
